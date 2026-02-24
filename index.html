@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreView Scanning - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>StoreView Scanning</h1>
+            <p class="subtitle">Recent Aisle Scans</p>
+        </header>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="dateFilter">Date & Time</label>
+                <input type="date" id="dateFilter" />
+            </div>
+            <div class="filter-group">
+                <label for="sourceFilter">Scan Source</label>
+                <input type="text" id="sourceFilter" placeholder="Search by Shopper ID..." />
+            </div>
+            <button id="clearFilters" class="btn-secondary">Clear Filters</button>
+        </div>
+
+        <div class="table-container">
+            <table id="scansTable">
+                <thead>
+                    <tr>
+                        <th>Day / Time</th>
+                        <th>Unique UPCs</th>
+                        <th>Scan Source</th>
+                        <th>Category</th>
+                    </tr>
+                </thead>
+                <tbody id="scansTableBody">
+                    <!-- Will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            No scans found matching your filters.
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

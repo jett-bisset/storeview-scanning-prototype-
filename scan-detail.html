@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreView Scanning - Scan Detail</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← Back to Scans</a>
+            <h1 id="scanTitle">Scan Details</h1>
+            <p class="subtitle" id="scanSubtitle"></p>
+        </header>
+
+        <!-- Share of Shelf Summary (P2) -->
+        <div class="share-of-shelf-summary">
+            <h2>Share of Shelf Summary</h2>
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-value" id="totalProducts">0</div>
+                    <div class="stat-label">Total Unique Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalBrands">0</div>
+                    <div class="stat-label">Total Unique Brands</div>
+                </div>
+            </div>
+            <div class="brand-breakdown">
+                <h3>Brand Share of Shelf</h3>
+                <div id="brandBreakdown" class="brand-list">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label for="brandFilter">Brand</label>
+                <select id="brandFilter">
+                    <option value="">All Brands</option>
+                    <!-- Will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="availabilityFilter">Availability</label>
+                <select id="availabilityFilter">
+                    <option value="">All</option>
+                    <option value="in-stock">In Stock</option>
+                    <option value="out-of-stock">Out of Stock</option>
+                </select>
+            </div>
+            <button id="clearFilters" class="btn-secondary">Clear Filters</button>
+        </div>
+
+        <div class="table-container">
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Availability</th>
+                        <th>Facings</th>
+                        <th>Images</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTableBody">
+                    <!-- Will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id="noResults" class="no-results" style="display: none;">
+            No products found matching your filters.
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <div id="modalImages" class="modal-images">
+                <!-- Images will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scan-detail.js"></script>
+</body>
+</html>
