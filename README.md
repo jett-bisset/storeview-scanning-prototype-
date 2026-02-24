@@ -2,11 +2,18 @@
 
 This is a fully functional HTML/CSS/JavaScript prototype implementing all requirements from the [WIP][DEMO] StoreView Scanning requirements document.
 
+## Password Protection
+
+This prototype is password protected. The default password is: **storeview2026**
+
+To change the password, edit `auth.js` and update the `CORRECT_PASSWORD` value.
+
 ## How to Use
 
 1. Open `index.html` in your web browser
-2. Browse the home page showing recent scans
-3. Click on any scan row to view detailed product information
+2. Enter the password when prompted
+3. Browse the home page showing recent scans
+4. Click on any scan row to view detailed product information
 
 ## Features Implemented
 
